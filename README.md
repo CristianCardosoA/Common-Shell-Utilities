@@ -3,7 +3,7 @@
 
 ### Linux Command Line
 
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+These are the following tools that will work on this post.
 
 | Tool |
 | ------ |
@@ -25,9 +25,34 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 $ cat example  | tr a-z A-Z
 ```
 
-On the next example the content of example use of tr is to translate lowercase into uppercase.
+On the next example the content of example use of *tr* is to translate lowercase into uppercase.
 
 ```sh
 $ cat example  | tr a-z A-Z > example2
 ```
 
+With option *-d* (which means delete) will remove all the upper cases from the file.
+```sh
+$ cat example  | tr -d [:upper:]
+```
+
+This will remove all the lower cases from the file.
+```sh
+$ cat example  | tr -d [:lower:]
+```
+
+This command with option *-s* replaces all the upper letter with & but will delete ocurrences.
+```sh
+$ cat example  | tr -s [:upper:] '&'
+```
+
+This command with option *-d* replaces all the upper letter with & but will not delete ocurrences.
+```sh
+$ cat example  | tr -t [=d=] '*'
+```
+
+This command with option *-c* which is complement, will replace all the letters that does not have upper case with a *.
+
+ ```sh
+ cat example  | tr -c [:upper:] '*'
+```
