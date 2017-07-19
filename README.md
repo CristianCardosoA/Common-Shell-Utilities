@@ -89,3 +89,43 @@ Also useful is the option *-k* , which makes sure that is order by key, the defa
  ```sh
 $ sort -k 4 -t : users 
 ```
+
+### Working with diff
+ ```sh
+$ diff example1 example2 
+```
+
+```sh
+$ diff --side-by-side  example example1
+```
+
+### Working with uniq
+
+Uniq command is helpful to remove or detect duplicate entries in a file
+```sh
+$ uniq test
+```
+
+This option *-c* is to count occurrence of lines in file.
+```sh
+$ uniq -c test
+```
+
+Print only Duplicate Lines using -d option
+```sh
+$ uniq -c test
+```
+
+The following uniq command using option *w* is compares the first 8 characters of lines in file, and then using *c* option prints number of occurrences of lines of file.
+```sh
+$ uniq -c -w 8 test
+```
+
+Example with out sort 
+```sh
+$ echo -e "tst\ntest\ntest\nanother test\ntest" | uniq
+```
+Example with sort 
+```sh
+$ echo -e "tst\ntest\ntest\nanother test\ntest" | sort | uniq
+```
