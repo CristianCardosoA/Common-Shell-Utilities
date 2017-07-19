@@ -54,5 +54,32 @@ $ cat example  | tr -t [=d=] '*'
 This command with option *-c* which is complement, will replace all the letters that does not have upper case with a *.
 
  ```sh
- cat example  | tr -c [:upper:] '*'
+$ cat example  | tr -c [:upper:] '*'
+```
+
+### Working with sort
+
+Consider only blanks and alphanumeric characters *-d*
+ ```sh
+$ sort users -d
+```
+
+You can also use the built-in sort option *-o*, which allows you to specify an output file:
+ ```sh
+$ sort -o output.txt users
+```
+
+You can perform a reverse-order sort using the *-r* flag. For example, the following command:
+ ```sh
+$ sort -r users
+```
+
+If you just want to check to see if your input file is already sorted, use the *-c* option:
+ ```sh
+$ sort -c users
+```
+
+Also useful is the option *-n* , which makes sure that numbers are sorted correctly
+ ```sh
+$ sort -n users
 ```
