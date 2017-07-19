@@ -83,3 +83,9 @@ Also useful is the option *-n* , which makes sure that numbers are sorted correc
  ```sh
 $ sort -n users
 ```
+
+Also useful is the option *-k* , which makes sure that is order by key, the default file separator is a SPACE, but you can indicate a FS with option *-t*. Here is an example.
+
+ ```sh
+$ sort -k 4 -t : users 
+```
